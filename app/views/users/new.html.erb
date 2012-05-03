@@ -1,0 +1,37 @@
+<% provide(:title ,"Create a New #{t('brand')} Account") %>
+<div class="container">
+  
+  <div class="row">
+    <h1 class="page-header">New <%= t('brand') %> Customer</h1>
+  </div>
+
+  <div class="row">
+    <%= form_for(@user) do |f| %>
+
+      <div class="span6">
+        <%= render 'common/user_error_messages' %>
+
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation %>
+
+        <p>
+          <%= f.submit "Create Account", :class => "btn btn-large btn-primary" %>
+        <p>
+      </div>
+                 
+    <% end %>
+  </div>
+  
+</div>

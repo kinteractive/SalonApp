@@ -1,0 +1,37 @@
+<% provide(:title ,"Edit Your #{t('brand')} Account") %>
+<div class="container">
+
+  <div class="row">
+    <h1>Edit your <%= t('brand') %> account.</h1>
+  </div>
+
+  <div class="row">
+    <%= form_for(@user) do |f| %>
+      <%= render 'common/user_error_messages', :object => f.object %>
+
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirm Password" %>
+      <%= f.password_field :password_confirmation %>
+
+      <p>
+        <%= f.submit "Save changes", :class => "btn btn-large btn-primary" %>
+        or
+        <%= link_to "Cancel", :back, :id => 'new_user_cancel_link' %>
+      </p>
+    <% end %>
+
+    <%= avatar_for @user %>
+  </div>
+  
+</div>

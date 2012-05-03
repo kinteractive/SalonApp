@@ -1,0 +1,14 @@
+<% provide(:title ,"#{t('brand')} - #{@user.first_name} #{@user.last_name}") %>
+<div class="container">
+  
+  <div class="row">
+    
+    <div class="span8">
+      <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+      <h2><% if current_user == @user %><%= @user.email %><% end %></h2>
+      <p><% if current_user == @user %><%= link_to "Edit Your Profile", edit_user_path(@user) %><% end %></p>
+    </div>
+
+  </div>
+  
+</div> <!-- /container -->

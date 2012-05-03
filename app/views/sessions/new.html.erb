@@ -1,0 +1,32 @@
+<% provide(:title, "Sign In to #{t('brand')}") %>
+<div class="container">
+
+  <div class="row">
+    <h1 class="page-header">Sign In to <%= t('brand') %></h1>
+  </div>
+
+  <div class="row">
+    <%= form_for(:session, :url => sessions_path) do |f| %>
+      
+      <div class="span6">
+
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+
+        <p>
+          <%= f.submit "Sign In", :class => "btn btn-large btn-primary" %>
+        <p>
+      </div>
+      
+    <% end %>
+
+  </div>
+  
+  <div class="row page-header">
+    <h3>New user? <%= link_to "Sign up now!", signup_path %></h3>
+  </div>
+  
+</div>

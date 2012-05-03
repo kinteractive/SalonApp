@@ -1,0 +1,17 @@
+<%= provide(:title, "All #{t('brand')} Users") %>
+<div class="container">
+  <div class="row">
+    <h1>All <%= t('brand') %> Users.</h1>
+  </div>
+  
+  <%= will_paginate %>
+
+  <div class="row">
+    <ul class="users">
+      <%= render @users %>
+    </ul>
+  </div>
+
+  <%= will_paginate %>
+  
+</div>
