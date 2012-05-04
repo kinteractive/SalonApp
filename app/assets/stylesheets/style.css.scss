@@ -26,12 +26,79 @@
 }
 
 body {
-  background-color: white;
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
+  margin-top: 0px;
+  font-size: 16px;
+  font-family: "Trebuchet MS", sans-serif;
+  
+  background: #ff7cd8; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ff7cd8 0%, #fba6e1 12%, #fcecfc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff7cd8), color-stop(12%,#fba6e1), color-stop(100%,#fcecfc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ff7cd8 0%,#fba6e1 12%,#fcecfc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ff7cd8 0%,#fba6e1 12%,#fcecfc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ff7cd8 0%,#fba6e1 12%,#fcecfc 100%); /* IE10+ */
+  background: linear-gradient(top,  #ff7cd8 0%,#fba6e1 12%,#fcecfc 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7cd8', endColorstr='#fcecfc',GradientType=0 ); /* IE6-9 */
+}
+
+p {
   font-size: 14px;
+  line-height: 20px;
+  font-family: "Trebuchet MS", sans-serif
+}
+
+a.brand {
+  text-indent: -9999em;
+  background: image-url('pink-logo-white.png') no-repeat 20% 50%;
+  min-width: 175px;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.219em;
+  margin:0 0 18px 0;
+  color:#151515;
+  font-weight:300;
+  letter-spacing:-1px;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.219em;
+  margin:0 0 18px 0;
+  color:#151515;
+  font-weight:300;
+  letter-spacing:-1px;
+  font-size: 28px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height:1.219em;
+  margin:0 0 18px 0;
+  color:#151515;
+  font-weight:300;
+  letter-spacing:-1px;
+  font-size: 24px;
+}
+
+.home-grid {
+  border: 1px #ccc;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.home-featured {
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+
+.hero-unit {
+  background-color: inherit;
 }
 
 .navbar-inner {
@@ -49,9 +116,30 @@ body {
 footer {
   width: 900px;
   margin: 0 auto;
-  height: 40px;
+  height: 100px;
   padding: 30px 35px 0 35px;
+  background-color: black;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  color: white;
   text-align: center;
-  color: #333;
-  font-size: 10px;
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 24px;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+  }
+
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+  }
+
 }

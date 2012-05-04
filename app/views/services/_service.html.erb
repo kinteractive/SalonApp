@@ -1,0 +1,9 @@
+<div class="span7 offset1 service-listing">
+  <h1><%= service.name %> <small><%= service.price %></small></h1>
+  <p><%= service.description %></p>
+  <% if signed_in? %>
+    <% if is_admin? %>
+      <p>(<%= link_to "Edit", edit_service_path(service) %>)</p>
+    <% end %>
+  <% end %>
+</div>

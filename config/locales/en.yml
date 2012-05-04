@@ -2,7 +2,7 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  brand: "Pink, the Beauty Boutique"
+  brand: "Pink's"
   password-error: "Uh oh! That password and email combination does not work."
   profile-updated: "Woohoo! Your profile has been updated!"
   user-deleted: "The user has been deleted."

@@ -1,5 +1,5 @@
 <header>
-  <div class="navbar navbar-fixed-top">
+  <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
         <%= link_to t('brand'), root_path, :class => 'brand' %>
@@ -11,9 +11,6 @@
           <li><%= link_to "Schedule", schedule_path %></li>
         </ul>
         <ul class="nav pull-right">
-          <% if is_admin? %>
-            <li><%= link_to "Create Services", '#' %>          
-          <% end %>
           <% if signed_in? %>
             <li><%= link_to "Sign Out", signout_path, :method => :delete %></li>              
           <% else %>

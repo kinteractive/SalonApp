@@ -1,0 +1,8 @@
+<%= provide(:title, "#{@service.name} at #{t('brand')}") %>
+<div class="container">
+  <div class="row">
+    <h1 class="page-header"><%= @service.name %></h1>
+    <p><%= @service.description %></p>
+    <h4><%= @service.price %></h4>
+  </div>
+</div>

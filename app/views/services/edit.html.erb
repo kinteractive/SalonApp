@@ -1,0 +1,24 @@
+<% provide(:title ,"Edit a Service") %>
+<div class="container">
+
+  <div class="row">
+    <h1 class="page-header">Edit Your Service <small><%= @service.name%></small></h1>
+  </div>
+
+  <div class="row">
+    <%= form_for(@service) do |f| %>
+
+      <%= f.label 'What is the name of the service?' %>
+      <%= f.text_field :name, placeholder: 'For example: Eyelash Extensions', class: "span5" %>
+
+      <%= f.label 'Provide a description for the service:' %>
+      <%= f.text_field :description, placeholder: 'This is the marketing text for the service', class: "span5" %>
+
+      <%= f.label 'What is the price of the service?' %>
+      <%= f.text_field :price, placeholder: 'For example: $39', class: "span3" %>
+
+      <p><%= f.submit "Save Changes", class: "btn btn-large btn-primary" %></p>
+    <% end %>
+  </div>
+  
+</div>

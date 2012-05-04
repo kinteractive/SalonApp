@@ -2,8 +2,62 @@
 <div class="container">
   
   <div class="hero-unit">
-    <h1>Welcome to Pink's</h1>
-    <p>Find places you'll love.</p>
+    <div id="myCarousel" class="carousel">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item">
+          <%= image_tag 'home_carousel/home_image_1.jpg'%>
+          <div class="carousel-caption">
+            <h4>Header Text</h4>
+            <p>Description text.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag 'home_carousel/home_image_2.jpg'%>
+          <div class="carousel-caption">
+            <h4>Header Text Some More</h4>
+            <p>Description text.</h4>
+          </div>          
+        </div>
+        <div class="item">
+          <%= image_tag 'home_carousel/home_image_3.jpg'%>
+          <div class="carousel-caption">
+            <h4>Header Text Wow Even Some More</h4>
+            <p>Description text.</h4>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag 'home_carousel/home_image_4.jpg'%>
+          <div class="carousel-caption">
+            <h4>Header Text Holy Moley</h4>
+            <p>Description text.</h4>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+  </div>
+  
+  <div class="row home-featured">
+    <div class="span7">
+      <h1 class="page-header home-grid">Featured Services</h1>
+      <ul>
+        <%- @services.each do |s| %>
+          <li><%= s.name %></li>
+        <% end %>
+      </ul>
+    </div>
+    
+    <div class="span5">
+      <h1 class="page-header home-grid">Special Offers</h1>
+      <ul>
+        <li>Offeroni</li>
+        <li>Offeroni</li>
+        <li>Offeroni</li>
+      </ul>
+    </div>
   </div>
   
 </div> <!-- /container -->
