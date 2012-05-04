@@ -7,6 +7,7 @@
 
   <div class="row">
     <%= form_for(@service) do |f| %>
+      <div><%= f.hidden_field :category_id %></div>
 
       <%= f.label 'What is the name of the service?' %>
       <%= f.text_field :name, placeholder: 'For example: Eyelash Extensions', class: "span5" %>

@@ -6,17 +6,19 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @service = Service.new(params[:service])
+    @category = Category.find(params[:service]['category_id'])
+    @service = @category.services.build(params[:service])
     if @service.save
       flash[:success] = t('service-created')
-      redirect_to @service
+      redirect_to services_path
     else
       render 'web_pages/home'
     end
   end
 
   def new
-    @service = Service.new
+    @category = Category.find(params[:category_id])
+    @service = @category.services.build
   end  
 
   def edit
@@ -34,7 +36,7 @@ class ServicesController < ApplicationController
   end
 
   def index
-    @services = Service.paginate(page: params[:page])
+    @categories = Category.all
   end
 
   def destroy

@@ -3,6 +3,7 @@ SalonApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :services
+  resources :categories
 
   get "users/new"
 

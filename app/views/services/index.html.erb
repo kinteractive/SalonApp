@@ -5,17 +5,26 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue tempor felis quis luctus. Sed suscipit dolor eget urna dignissim sit amet laoreet quam pellentesque. Nam elit sem, sodales eu porttitor non, sollicitudin eu lorem. Sed eget mi est, sit amet dignissim nunc. Sed sit amet odio in nulla lobortis tincidunt a sit amet leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat vestibulum erat sagittis molestie.</p>
   </div>
   
-  <%= will_paginate %>
-
   <div class="row">
-    <%= render @services %>
+    <%- @categories.each do |c| %>
+      <h1 class="page-header"><%= c.name %> 
+        <% if is_admin? %>
+          <small>(<%= link_to "Add Service", new_service_path(:category_id => c) %> | <%= link_to "Edit", edit_category_path(c) %> | <%= link_to "Delete", c, method: :delete, confirm: "You sure?" %>)</small>
+        <% end %>
+        
+      </h1>
+      <p><%= c.description %></p>
+      <% if !c.services.nil? %>
+        <%- c.services.each do |s| %>
+          <%= render s %>
+        <% end %>
+      <% end %>      
+    <% end %>
   </div>
   
-  <%= will_paginate %>
-  
   <% if is_admin? %>
-    <div class="row">
-      <%= link_to "Add a New Service", new_service_path, :class => "btn btn-large btn-primary" %>
+    <div class="row" align="center">
+      <%= link_to "Add a New Category", new_category_path, :class => "btn btn-large btn-primary" %>
     </div>
   <% end %>
 
