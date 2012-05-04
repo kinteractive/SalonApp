@@ -4,14 +4,13 @@
     <h1 class="page-header">All Services at <%= t('brand') %></h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam congue tempor felis quis luctus. Sed suscipit dolor eget urna dignissim sit amet laoreet quam pellentesque. Nam elit sem, sodales eu porttitor non, sollicitudin eu lorem. Sed eget mi est, sit amet dignissim nunc. Sed sit amet odio in nulla lobortis tincidunt a sit amet leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer volutpat vestibulum erat sagittis molestie.</p>
   </div>
-  
-  <div class="row">
-    <%- @categories.each do |c| %>
+
+  <%- @categories.each do |c| %>
+    <div class="row">
       <h1 class="page-header"><%= c.name %> 
         <% if is_admin? %>
           <small>(<%= link_to "Add Service", new_service_path(:category_id => c) %> | <%= link_to "Edit", edit_category_path(c) %> | <%= link_to "Delete", c, method: :delete, confirm: "You sure?" %>)</small>
         <% end %>
-        
       </h1>
       <p><%= c.description %></p>
       <% if !c.services.nil? %>
@@ -19,8 +18,8 @@
           <%= render s %>
         <% end %>
       <% end %>      
-    <% end %>
-  </div>
+    </div>
+  <% end %>
   
   <% if is_admin? %>
     <div class="row" align="center">

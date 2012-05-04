@@ -12,7 +12,7 @@
       <%= f.text_field :name, placeholder: 'For example: Eyelash Extensions', class: "span5" %>
 
       <%= f.label 'Provide a description for the service:' %>
-      <%= f.text_field :description, placeholder: 'This is the marketing text for the service', class: "span5" %>
+      <%= f.text_area :description, placeholder: 'This is the marketing text for the service', class: "span5", :rows => 5 %>
 
       <%= f.label 'What is the price of the service?' %>
       <%= f.text_field :price, placeholder: 'For example: $39', class: "span3" %>

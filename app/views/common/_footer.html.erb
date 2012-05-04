@@ -12,4 +12,14 @@
     </div>
   </div>
   
+  <div class="row signin-out" align="center">
+    <p>
+      <% if signed_in? %>
+        <%= link_to "Sign Out", signout_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path %> | <%= link_to "Sign In", signin_path %>
+      <% end %>
+    </p>
+  </div>
+  
 </footer>

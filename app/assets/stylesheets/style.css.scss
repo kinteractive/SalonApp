@@ -86,6 +86,17 @@ h3 {
   font-size: 24px;
 }
 
+.signin-out {
+  margin-bottom: 10px;
+  
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    letter-spacing:-1px;
+    font-size: 10px;    
+  }
+}
+
 .home-grid {
   border: 1px #ccc;
   margin-left: 10px;
@@ -93,6 +104,7 @@ h3 {
 }
 
 .home-featured {
+  border: 1px #ccc;
   margin-top: 25px;
   margin-bottom: 70px;
 }
@@ -116,7 +128,7 @@ h3 {
 footer {
   width: 900px;
   margin: 0 auto;
-  height: 100px;
+  height: 120px;
   padding: 30px 35px 0 35px;
   background-color: black;
   font-family: "Trebuchet MS", sans-serif;
