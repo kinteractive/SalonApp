@@ -1,5 +1,5 @@
-<div class="span7 offset1 service-listing">
-  <h1><%= service.name %> <small><%= service.price %></small></h1>
+<div class="span7">
+  <li><%= service.name %> <strong><%= service.price %></strong></li>
   <p><%= service.description %></p>
   <% if signed_in? %>
     <% if is_admin? %>

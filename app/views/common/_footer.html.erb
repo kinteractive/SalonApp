@@ -1,25 +1,47 @@
 <footer>
-  
-  <div class="row">
-    <div class="span6">
-      <h1>Pink's is Located At:</h1>
-      <h2>100 Queen Anne Ave N., Seattle 98109</h2>
+  <div class="foot">
+    <div class="bottom">
+      <ul>
+        <li><h4>Categories</h4></li>
+        <li><%= link_to "Home", home_path %></li>
+        <li><%= link_to "Services", services_path %></li>
+        <li><%= link_to "Products", products_path %></li>
+        <li><%= link_to "Meet Us", meetus_path %></li>
+      </ul>
+      <ul>
+        <li><h4>About Us</h4></li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent <br />
+          tempor facilisis congue. Lorem sum dolor sit amet, consectetur <br />
+          adippend...
+          <br />
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent <br />
+          tempor facilisis congue. Lorem sum dolor sit amet, consectetur <br />
+          adippend...</li>
+      </ul>
+      <ul style=" margin:0;">
+        <li><h4>Twitter Updates</h4></li>
+        <li> 
+          <div class="text1">
+            <p>sample there is a new designer in <br />
+            town people! It’s amazing How you can <br />
+            do everything inside twitter!</p>
+            <span>3 minutes ago via Twitter</span></div>
+          </div>
+        </li>
+      </ul>
+      <div style="clear:both"></div>
+      
     </div>
     
-    <div class="span4">
-      <h2>206-555-1212</h2>
-      <%= link_to "Book Appointment Online", "http://www.spabooker.com", :class => "btn btn-primary", :target => "_blank" %>
+    <div class="footer">
+      <div class="footer-left">© 2012 Pink's The Beauty Boutique.</div>
+        <% if !signed_in? %>
+          <div class="footer-right"><%= link_to "Sign In", signin_path %> | <%= link_to "Sign Up", signup_path %></div>
+        <% else %>
+          <div class="footer-right"><%= link_to "Sign Out", signout_path %></div>
+        <% end %>
+      <div style="clear:both"></div>
     </div>
+    
   </div>
-  
-  <div class="row signin-out" align="center">
-    <p>
-      <% if signed_in? %>
-        <%= link_to "Sign Out", signout_path, :method => :delete %>
-      <% else %>
-        <%= link_to "Sign Up", signup_path %> | <%= link_to "Sign In", signin_path %>
-      <% end %>
-    </p>
-  </div>
-  
 </footer>

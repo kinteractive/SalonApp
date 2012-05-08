@@ -13,11 +13,13 @@
         <% end %>
       </h1>
       <p><%= c.description %></p>
-      <% if !c.services.nil? %>
-        <%- c.services.each do |s| %>
-          <%= render s %>
-        <% end %>
-      <% end %>      
+      <ul>
+        <% if !c.services.nil? %>
+          <%- c.services.each do |s| %>
+            <%= render s %>
+          <% end %>
+        <% end %>      
+      </ul>
     </div>
   <% end %>
   

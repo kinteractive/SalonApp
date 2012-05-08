@@ -15,29 +15,36 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:site_name" content="Just Flew In" />
+    <meta property="og:site_name" content="Pink's" />
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="<%= yield(:title).present? ? yield(:title) : t('brand') %>"/>
-    <meta property="og:description" content="Find stuff in new cities that are in line with your tastes and preferences back home."/>
+    <meta property="og:description" content="The Beauty Boutique in Lower Queen Anne."/>
     
     <!-- Google Meta Tags -->
     <meta name="google-site-verification" content="oMRdbHE1oJ-NeNVTtXNf18G25iwS078iR_TyNYPOZVs" />
-    <meta name="description" content="Find stuff in new cities that are in line with your tastes and preferences back home. <%= yield(:title).present? ? yield(:title) : 'Find your neighborhood.' %>" />  
+    <meta name="description" content="The Beauty Boutique in Lower Queen Anne" />  
     
     <!-- Google Analytics -->
     <%= render 'common/google_analytics' %>
   </head>
   <body>
-    <div id="fb-root"></div>
-    <%= render 'common/header' %>    
     
-    <div>
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-      <%= yield %>
+    <div id="warp">
+
+      <%= render 'common/header' %>    
+
+      <div class="center">
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
+        
+        <%= yield %>
+        
+      </div>
+
+      <%= render 'common/footer' %>
+
     </div>
-    
-    <%= render 'common/footer' %>
+
   </body>
 </html>
