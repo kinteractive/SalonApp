@@ -50,7 +50,7 @@ a.brand {
 .bottom ul li{margin:0 ; padding:0 0 5px 0; line-height:20px; }
 .bottom ul li a {color:white; text-decoration:none;}
 .bottom ul li a:hover{ text-decoration:underline;}
-h4{ margin:0; padding:0 0 15px 0; color:black; font-size:22px;}
+h4{ margin:0; padding:0 0 15px 0; color:black; font-size:22px; font-family: 'Handlee', cursive;}
 .text{ width:305px; background:url(text1.jpg) no-repeat; height:117px;}
 .text1{ width:285px; height:97px; background:#ED5D5D; padding:20px 0 0 0; float:right; }
 .text1 p{ color:white; margin:0; padding:0;}
@@ -68,10 +68,11 @@ h4{ margin:0; padding:0 0 15px 0; color:black; font-size:22px;}
 .content ul li{ margin:0; padding-bottom:20px; color:black; }
 .content ul li a {color:black; text-decoration:none;}
 .content ul li a:hover{ text-decoration:none;}
-.content ul li h3 {color:red;}
+.content ul li h3 {color:darkgray;}
 
-h2{ margin:0; padding:0;  font-size:24px; color:black;}
-h3{ margin:0; padding:0;  font-size:18px;}
+h1{ margin:0; padding:0;  font-size:32px; color:black; font-family: 'Handlee', cursive;}
+h2{ margin:0; padding:0;  font-size:24px; color:black; font-family: 'Handlee', cursive;}
+h3{ margin:0; padding:0;  font-size:18px; font-family: 'Handlee', cursive;}
 .btn { height:28px;  width:auto;  font-weight:bold; line-height:28px; float:left; margin-right:15px; font-size:12px;}
 .btn a {color:#fff;background:#647393; padding:5px 10px; text-decoration:none;}
 .btn a:hover{ text-decoration:underline;}
