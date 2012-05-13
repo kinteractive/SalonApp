@@ -4,7 +4,6 @@
       <div class="container">
         <%= link_to t('brand'), root_path, :class => 'brand' %>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", home_path %></li>
           <li><%= link_to "Services", services_path %></li>
           <li><%= link_to "Products", products_path %></li>
           <li><%= link_to "Meet Us", meetus_path %></li>
@@ -12,6 +11,7 @@
           <li><%= link_to image_tag('facebook-menu.png'), 'http://facebook.com/getmannequin', :target => '_blank' %></li>
           <li><%= link_to image_tag('tumblr-menu.png'), 'http://blog.mannequinapp.com', :target => '_blank' %></li>
         </ul>
+        <%= link_to "Book an Appointment", '#', :class => 'btn btn-mini btn-info' %>
       </div>
     </div>
   </div>
