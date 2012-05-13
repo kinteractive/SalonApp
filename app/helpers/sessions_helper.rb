@@ -11,7 +11,7 @@ module SessionsHelper
   
   def is_admin?
     if !current_user.nil?
-      current_user.email == 'prashant@pinksthebeautyboutique.com' || 'shelby@pinksthebeautyboutique.com' || 'vanessa@pinksthebeautyboutique.com'
+      current_user.email == 'prashant@pinksthebeautyboutique.com' || 'shelby@pinksthebeautyboutique.com' || 'vanessa@pinksthebeautyboutique.com' || 'prashant_sridharan@hotmail.com'
     else
       false
     end

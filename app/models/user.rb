@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   before_save :create_remember_token
   
   def is_admin?
-    email == 'prashant@pinksthebeautyboutique.com' || 'shelby@pinksthebeautyboutique.com' || 'vanessa@pinksthebeautyboutique.com'
+    email == 'prashant@pinksthebeautyboutique.com' || 'shelby@pinksthebeautyboutique.com' || 'vanessa@pinksthebeautyboutique.com' || 'prashant_sridharan@hotmail.com'
   end
 
   private
