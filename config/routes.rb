@@ -14,9 +14,7 @@ SalonApp::Application.routes.draw do
   root to: 'web_pages#home'
   match '/home',        to: 'web_pages#home'
   match '/services',    to: 'web_pages#services'
-  match '/products',    to: 'web_pages#products'
+  match '/information', to: 'web_pages#information'
   match '/meetus',      to: 'web_pages#meetus'
-  match '/location',    to: 'web_pages#location'
-  match '/admin',       to: 'web_pages#admin'
 
 end

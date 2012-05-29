@@ -5,23 +5,23 @@
   
   <div class="content">
     <ul>
-      <li><h2><%= image_tag 'home_images/services.png' %> <%= link_to "Featured Services", services_path %></h2></li>
+      <li><h2><%= image_tag 'home_images/services.png' %> <%= link_to "Services", services_path %></h2></li>
         <%- @categories.each do |c| %>
           <li><h3><%= c.name %></h3></li>
         <% end %>
     </ul>
     
     <ul>
-      <li><h2><%= image_tag 'home_images/offers.png' %> Apparel</h2></li>
-      <li><h3>Offeroni</h3></li>
-      <li><h3>Offeroni</h3></li>
-      <li><h3>Offeroni</h3></li>
+      <li><h2><%= image_tag 'home_images/offers.png' %> Featured Labels</h2></li>
+      <li><h3>Daftbird</h3></li>
+      <li><h3>Only Hearts</h3></li>
+      <li><h3>Woodleigh</h3></li>
     </ul>
 
     <ul>
       <li><h2><%= image_tag 'home_images/contact.png' %> <%= link_to "Contact Us", location_path %></h2></li>
-      <li><h3>100 Queen Anne Ave (Map)</h3></li>
-      <li><h3>206-555-1212</h3></li>
+      <li><h3>623 Queen Anne Ave N (<%= link_to "Map", 'https://maps.google.com/maps?q=623+queen+anne+ave+n&client=safari&oe=UTF-8&hnear=623+Queen+Anne+Ave+N,+Seattle,+Washington+98119&gl=us&t=m&z=16', :target => '_blank' %>)</h3></li>
+      <li><h3>206-402-6310</h3></li>
       <li><%= link_to "Book An Appointment", '#', :class => 'btn btn-large btn-info' %></li>
     </ul>
   </div>
