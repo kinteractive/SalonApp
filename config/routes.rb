@@ -16,5 +16,6 @@ SalonApp::Application.routes.draw do
   match '/services',    to: 'web_pages#services'
   match '/information', to: 'web_pages#information'
   match '/meetus',      to: 'web_pages#meetus'
+  match '/location',    to: 'web_pages#location'
 
 end
