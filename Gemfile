@@ -15,6 +15,8 @@ gem 'haml', '~>3.1.4'
 gem 'jquery-rails'
 gem 'bootstrap-will_paginate', '~>0.0.7'
 
+gem 'twitter'
+
 group :development, :test do
   gem 'sqlite3', '~>1.3.5'
 end
